@@ -1,15 +1,24 @@
-let toto = "maxime le bg"
+const circle = new mojs.Shape({
+    parent: '.one',
+    shape: 'circle',
+    radius: {20:50},
+    fill: {'red': 'blue'},
+    duration: 2000,
+    isYoyo: true,
+    repeat: 1,
+    isShowStart: true,
+}).then({
+   x: 'rand(-250,250)',
+}).play();
 
 
 
 
 
 
-// new MojsPlayer({ add: , isPlaying: true, isRepeat: true});
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    bouncyCircle.play();
+    new MojsPlayer({ add: circle, isPlaying: true, isRepeat: true});
 })
 
-let toto = "maxime l 'unique"
