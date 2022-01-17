@@ -1,10 +1,10 @@
+let toto = "maxime le bg"
 
 
 
 
 
-
-new MojsPlayer({ add: , isPlaying: true, isRepeat: true});
+new MojsPlayer({ add: requestIdleCallback, isPlaying: true, isRepeat: true});
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
