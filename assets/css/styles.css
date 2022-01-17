@@ -1,5 +1,10 @@
 body {
     display: flex;
+    background-color: #1fc8db;
+    background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+    color: white;
+    opacity: 0.95;
+    background-size: cover;
 }
 
 .div-animated {
@@ -8,3 +13,35 @@ body {
     right: 0;
 }
 
+body, html {
+    background-image: url(https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+    background-size: cover;
+    padding: 0;
+    margin:  0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.div-animated {
+    position: absolute;
+        width: 75%;
+        height: 70%;
+        top: 140px;
+        left: 13%;
+        background: #ffffff;
+        border-radius: 20px;
+}
+
+.text {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 50px; 
+    font-weight: bolder;
+    position: absolute;
+    top: 40px;
+   left: 32%;
+   right: 30%;
+    text-align: center;
+    text-shadow: 3px 3px 5px rgb(0, 0, 0);
+   }
