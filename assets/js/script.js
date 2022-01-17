@@ -4,7 +4,7 @@
 
 
 
-new MojsPlayer({ add: , isPlaying: true, isRepeat: true});
+// new MojsPlayer({ add: , isPlaying: true, isRepeat: true});
 
 
 document.addEventListener('DOMContentLoaded', (event) => {
