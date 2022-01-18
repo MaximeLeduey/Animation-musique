@@ -1,3 +1,4 @@
+
 /* -----------------------------------------------------
 timeline début de Yanis 
 ------------------------------------------------------- */
@@ -18,34 +19,6 @@ const COLORS = {
     beige: '#30475E',
     blue : '#562f7e'
   };
-
-
-/* const carre = new mojs.Shape({
-  shape:    'rect', 
-  fill:     'none',
-  stroke:   'purple',
-  scale:    { 0 : 1 },
-  strokeWidth: { 50 : 0 },
-  y:         -20,
-  duration:  600,
-  delay: 50,
-  radius: 200,
-  top : 370,
-});
-
-const carre1 = new mojs.Shape({
-  shape:    'rect', 
-  fill:     'none',
-  stroke:   'purple',
-  scale:    { 1 : 0 },
-  strokeWidth: { 50 : 0 },
-  y:         -10,
-  duration:  600,
-  radius: 200,
-  top: 370,
-}); */
-
-
 
   const burst1 = new mojs.Burst({
     radius:   { 0: 100 },
@@ -77,7 +50,6 @@ Yanistimeline.append(burst1)
 
 
 new MojsPlayer({ add: Yanistimeline, isPlaying: true, });
-
 
 
 
