@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
 body {
     display: flex;
     background-color: #1fc8db;
@@ -40,4 +43,5 @@ body, html {
    right: 30%;
     text-align: center;
     text-shadow: 3px 3px 5px rgb(0, 0, 0);
+    font-family: 'Righteous';
    }

@@ -1,3 +1,5 @@
+
+
 // --------------------------------------------------------------------------------------
 // début de timeline de Maxime
 // -------------------------------------------------------------------------------------
@@ -123,13 +125,57 @@ const circle8 = new mojs.Shape({
 // fin de timeline de Maxime
 // -------------------------------------------------------------------------------------
 
+
+/* -----------------------------------------------------
+timeline début de Yanis 
+------------------------------------------------------- */
+
+const COLORS = {
+    white:   '#ffffff',
+    black:   '#000000',
+    green:   '#49F2CC',
+    lightGrey: '#777',
+    grey:    '#29363B',
+    cyan:    'cyan',
+    yellow:  '#FFE202',
+    hotpink: 'deeppink',
+    red: '#F05454',
+    beige: '#30475E',
+    blue : '#562f7e'
+  };
+
+  const burst1 = new mojs.Burst({
+    radius:   { 0: 100 },
+    count:    20,
+    radius: 100,
+    scale:    { 1: 0 },
+    children: {
+      shape:      'polygon',
+      fill:       { 'purple' : 'purple' },
+      radius:     180,
+      rotate:      { 360: 0 },
+      duration:   1100,
+    },
+    top: 350,
+  });
+  
+
+
+
+/* -----------------------------------------
+fin timeline de Yanis 
+----------------------------------------- */
+
 document.addEventListener('DOMContentLoaded', (event) => {
 // timeline de maxime
 const maximeTimeline = new mojs.Timeline({repeat:6});
 maximeTimeline.append(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8, );
+// timeline de Yanis
+const Yanistimeline = new mojs.Timeline({});
+Yanistimeline.append(burst1)
 // timeline principale
 const mainTimeline = new mojs.Timeline({});
-mainTimeline.append(maximeTimeline);
+mainTimeline.append(maximeTimeline, Yanistimeline);
 
 let play = document.querySelector('.div-animated');
 play.addEventListener('click', function(){
@@ -142,4 +188,5 @@ play.addEventListener('click', function(){
 //   add: mainTimeline
 // });
 })
+
 
