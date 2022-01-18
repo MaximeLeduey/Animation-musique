@@ -108,9 +108,9 @@ const restart = new mojs.Shape({
 document.addEventListener('DOMContentLoaded', (event) => {
 // timeline de maxime
 const maximeTimeline = new mojs.Timeline({});
-maximeTimeline.append(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8);
+maximeTimeline.append(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8, );
 // timeline principale
-const mainTimeline = new mojs.Timeline({});
+const mainTimeline = new mojs.Timeline({repeat:8});
 mainTimeline.add(maximeTimeline);
 
 let play = document.querySelector('.div-animated');
