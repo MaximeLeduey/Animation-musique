@@ -221,10 +221,7 @@ const rect1 = new mojs.Shape({
       y: { 0: 50 },
       speed: 2,
     })
-<<<<<<< HEAD
-=======
-    
->>>>>>> 762722a7eb72fed310f8f5679186d6c1ef47bb3a
+
   const polygon1 = new mojs.Shape({
     parent: ".div-animated",
     shape: "polygon",
@@ -246,10 +243,7 @@ const rect1 = new mojs.Shape({
       strokeWidth: { 100: 10 },
       speed: 2,
     })
-<<<<<<< HEAD
-=======
-    
->>>>>>> 762722a7eb72fed310f8f5679186d6c1ef47bb3a
+
   class star extends mojs.CustomShape {
     getShape() {
       return '<path id="Icon_awesome-star" data-name="Icon awesome-star" d="M46.077,3.478,33.871,29.334,6.563,33.494c-4.9.742-6.86,7.05-3.308,10.663L23.012,64.271,18.339,92.685c-.841,5.136,4.336,8.983,8.673,6.581L51.441,85.85l24.43,13.416c4.336,2.383,9.514-1.445,8.673-6.581L79.871,64.271,99.628,44.156c3.551-3.613,1.589-9.921-3.308-10.663l-27.308-4.16L56.806,3.478a5.876,5.876,0,0,0-10.729,0Z" transform="translate(-1.441 0.001)"/>';
@@ -301,10 +295,7 @@ const rect1 = new mojs.Shape({
       x: { 150: -500 },
       y: { 300: -100 },
     })
-<<<<<<< HEAD
-=======
-   
->>>>>>> 762722a7eb72fed310f8f5679186d6c1ef47bb3a
+
   const burst = new mojs.Shape({
     parent: ".div-animated",
     fill: "brown",
@@ -315,13 +306,9 @@ const rect1 = new mojs.Shape({
     degree : 360,
     speed: 3,
     delay: 900,
-<<<<<<< HEAD
   });
-=======
-  })
->>>>>>> 762722a7eb72fed310f8f5679186d6c1ef47bb3a
-  
 
+  
   /* -------------------------------------------------------------------------------------------
   ----------------------------Fin timeline de Evan--------------------------------------------
   ---------------------------------------------------------------------------------------------- */
@@ -331,13 +318,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 const maximeTimeline = new mojs.Timeline({repeat:6});
 maximeTimeline.append(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8,);
 // timeline de Yanis
-<<<<<<< HEAD
-const Yanistimeline = new mojs.Timeline({delay:2450});
-Yanistimeline.append(burst1)
-=======
 const Yanistimeline = new mojs.Timeline({delay:2200});
 Yanistimeline.append(circle,burst1)
->>>>>>> 762722a7eb72fed310f8f5679186d6c1ef47bb3a
 // timeline de evan 
 const Evantimeline = new mojs.Timeline();
 Evantimeline.add(rect1, polygon1, star1, burst);
