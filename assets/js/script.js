@@ -143,6 +143,24 @@ const COLORS = {
     beige: '#30475E',
     blue : '#562f7e'
   };
+const shiftCurve = mojs.easing.path( 'M0,100 C50,100 50,100 50,50 C50,0 50,0 100,0' );
+const scaleCurveBase = mojs.easing.path( 'M0,100 C21.3776817,95.8051376 50,77.3262711 50,-700 C50,80.1708527 76.6222458,93.9449005 100,100' );
+const scaleCurve = (p) => { return 1 + scaleCurveBase(p); };
+const nScaleCurve = (p) => { return 1 - scaleCurveBase(p)/10; };
+
+const circle = new mojs.Shape({
+  shape:        'rect',
+  fill:         { 'purple' : 'purple', curve: scaleCurve },
+  radius:       20,
+  rx:           3,
+  x:            { [-0] : 0, easing: shiftCurve },
+  scaleX:       { 1 : 1, curve: scaleCurve },
+  scaleY:       { 1 : 1, curve: nScaleCurve },
+  origin:       { '0 50%' : '100% 50%', easing: shiftCurve },
+  duration:     800,
+  isShowEnd: false,
+  top: 350,
+});
 
   const burst1 = new mojs.Burst({
     radius:   { 0: 100 },
@@ -154,7 +172,7 @@ const COLORS = {
       fill:       { 'purple' : 'purple' },
       radius:     180,
       rotate:      { 360: 0 },
-      duration:   1100,
+      duration:   800,
     },
     top: 350,
   });
@@ -201,7 +219,7 @@ const rect1 = new mojs.Shape({
       y: { 0: 50 },
       speed: 2,
     })
-    .play();
+    
   const polygon1 = new mojs.Shape({
     parent: ".div-animated",
     shape: "polygon",
@@ -223,7 +241,7 @@ const rect1 = new mojs.Shape({
       strokeWidth: { 100: 10 },
       speed: 2,
     })
-    .play();
+    
   class star extends mojs.CustomShape {
     getShape() {
       return '<path id="Icon_awesome-star" data-name="Icon awesome-star" d="M46.077,3.478,33.871,29.334,6.563,33.494c-4.9.742-6.86,7.05-3.308,10.663L23.012,64.271,18.339,92.685c-.841,5.136,4.336,8.983,8.673,6.581L51.441,85.85l24.43,13.416c4.336,2.383,9.514-1.445,8.673-6.581L79.871,64.271,99.628,44.156c3.551-3.613,1.589-9.921-3.308-10.663l-27.308-4.16L56.806,3.478a5.876,5.876,0,0,0-10.729,0Z" transform="translate(-1.441 0.001)"/>';
@@ -275,7 +293,7 @@ const rect1 = new mojs.Shape({
       x: { 150: -500 },
       y: { 300: -100 },
     })
-    .play();
+   
   const burst = new mojs.Shape({
     parent: ".div-animated",
     fill: "brown",
@@ -286,7 +304,7 @@ const rect1 = new mojs.Shape({
     degree : 360,
     speed: 3,
     delay: 900,
-  }).play();
+  })
   
 
   /* -------------------------------------------------------------------------------------------
@@ -296,10 +314,10 @@ const rect1 = new mojs.Shape({
 document.addEventListener('DOMContentLoaded', (event) => {
 // timeline de maxime
 const maximeTimeline = new mojs.Timeline({repeat:6});
-maximeTimeline.append(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8, );
+maximeTimeline.append(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8,);
 // timeline de Yanis
-const Yanistimeline = new mojs.Timeline({});
-Yanistimeline.append(burst1)
+const Yanistimeline = new mojs.Timeline({delay:2200});
+Yanistimeline.append(circle,burst1)
 // timeline de evan 
 const Evantimeline = new mojs.Timeline();
 Evantimeline.add(rect1, polygon1, star1, burst);
