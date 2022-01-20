@@ -1,6 +1,5 @@
-let music = new Audio('/assets/song/futur-bass.mp3');
-let bpm = 60/133;
-bpm = bpm * 1000;
+/* -------------------------------------------------------------------------------------------
+----------------------------Début timeline de Evan-------------------------------------------- */
 
 
 // --------------------------------------------------------------------------------------
@@ -169,7 +168,9 @@ fin timeline de Yanis
 //   x: 0,
 //   duration: 500,
 //   speed: 1,
-// }).play();// const rect1 = new mojs.Shape({
+// }).play();
+
+// const rect1 = new mojs.Shape({
 //   parent: ".div-animated",
 //   shape: "rect",
 //   fill: "none",
@@ -191,7 +192,9 @@ fin timeline de Yanis
 //   y: { 0: 50 },
 //   speed: 2,
 // });
-// .play();// const polygon1 = new mojs.Shape({
+// .play();
+
+// const polygon1 = new mojs.Shape({
 //   parent: ".div-animated",
 //   shape: "polygon",
 //   points: 6,
@@ -212,7 +215,9 @@ fin timeline de Yanis
 //   strokeWidth: { 100: 10 },
 //   speed: 3,
 // });
-// .play();// class star extends mojs.CustomShape {
+// .play();
+
+// class star extends mojs.CustomShape {
 //   getShape() {
 //     return '<path id="Icon_awesome-star" data-name="Icon awesome-star" d="M46.077,3.478,33.871,29.334,6.563,33.494c-4.9.742-6.86,7.05-3.308,10.663L23.012,64.271,18.339,92.685c-.841,5.136,4.336,8.983,8.673,6.581L51.441,85.85l24.43,13.416c4.336,2.383,9.514-1.445,8.673-6.581L79.871,64.271,99.628,44.156c3.551-3.613,1.589-9.921-3.308-10.663l-27.308-4.16L56.806,3.478a5.876,5.876,0,0,0-10.729,0Z" transform="translate(-1.441 0.001)"/>';
 //   }
@@ -363,6 +368,7 @@ const star1 = new mojs.Shape({
     x: { 150: -500 },
   });
 // .play();
+
 // const burst = new mojs.Shape({
 //   parent: ".div-animated",
 //   fill: "brown",
@@ -373,92 +379,108 @@ const star1 = new mojs.Shape({
 //   degree : 360,
 //   speed: 3,
 //   delay: 900,
+// }).play();
+
 const burst1 = new mojs.Burst({
-  radius: { 50: 200 },
+  radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
-  x: { 0: -500 },
-  y: { 0: -200 },
+  x: { 0: -550 },
+  y: { 0: -160 },
   children: {
     fill: { red: "yellow" },
     duration: 3000,
   },
-  delay: 900,
+  // delay: 900,
   // repeat : 2,
-});const burst2 = new mojs.Burst({
-  radius: { 50: 200 },
+});
+
+const burst2 = new mojs.Burst({
+  radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
-  x: { 0: -500 },
-  y: { 0: 200 },
+  x: { 0: -550 },
+  y: { 0: 160 },
   children: {
     fill: { yellow: "blue" },
     duration: 3000,
   },
-  delay: 900,
+  // delay: 900,
   // repeat : 2,
-});const burst3 = new mojs.Burst({
-  radius: { 50: 200 },
+});
+
+const burst3 = new mojs.Burst({
+  radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
-  x: { 0: 500 },
-  y: { 0: -200 },
+  x: { 0: 550 },
+  y: { 0: -160 },
   children: {
     fill: { blue: "pink" },
     duration: 3000,
   },
   delay: 900,
   // repeat : 2,
-});const burst4 = new mojs.Burst({
-  radius: { 50: 200 },
+});
+
+const burst4 = new mojs.Burst({
+  radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
-  x: { 0: 500 },
-  y: { 0: 200 },
+  x: { 0: 550 },
+  y: { 0: 160 },
   children: {
     fill: { pink: "black" },
     duration: 3000,
   },
-  delay: 900,
+  // delay: 900,
   // repeat : 2,
-});const burst5 = new mojs.Burst({
-  radius: { 50: 200 },
+});
+
+const burst5 = new mojs.Burst({
+  radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
-  x: 400,
-  y: 180,
+  x: 450,
+  y: 160,
   children: {
     fill: "purple",
     duration: 3000,
   },
-  delay: 1000,
+  // delay: 1000,
   // repeat : 2,
-});const burst6 = new mojs.Burst({
-  radius: { 50: 200 },
+});
+
+const burst6 = new mojs.Burst({
+  radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
-  x: -400,
-  y: 180,
+  x: -450,
+  y: 160,
   children: {
     fill: "lime",
     duration: 3000,
   },
   delay: 2000,
   // repeat : 2,
-});const burst7 = new mojs.Burst({
-  radius: { 50: 200 },
+});
+
+const burst7 = new mojs.Burst({
+  radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
-  x: 400,
-  y: -180,
+  x: 450,
+  y: -160,
   children: {
     fill: "cyan",
     duration: 3000,
   },
-  delay: 3000,
+  // delay: 3000,
   // repeat : 2,
-});const burst8 = new mojs.Burst({
-  radius: { 50: 200 },
+});
+
+const burst8 = new mojs.Burst({
+  radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
   x: 0,
@@ -469,19 +491,23 @@ const burst1 = new mojs.Burst({
   },
   delay: 4000,
   // repeat : 2,
-});const burst9 = new mojs.Burst({
-  radius: { 50: 200 },
+});
+
+const burst9 = new mojs.Burst({
+  radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
-  x: -400,
-  y: -180,
+  x: -450,
+  y: -160,
   children: {
     fill: "white",
     duration: 5000,
   },
-  delay: 5000,
+  // delay: 5000,
   // repeat : 2,
-});const Evantimeline = new mojs.Timeline();
+});
+
+const Evantimeline = new mojs.Timeline();
 Evantimeline.add(
   // rect1,
   // polygon1,
@@ -495,13 +521,15 @@ Evantimeline.add(
   burst7,
   burst8,
   burst9
-);// document.addEventListener("DOMContentLoaded", (event) => {
-//   new MojsPlayer({
-//     add: Evantimeline,
-//     isPlaying: true,
-//     isRepeat: true,
-//   });
-// });
+);
+
+document.addEventListener("DOMContentLoaded", (event) => {
+  new MojsPlayer({
+    add: Evantimeline,
+    isPlaying: true,
+    isRepeat: true,
+  });
+});
 /* ---------------------------------------------------------------------------------------------
 ----------------------------  Fin timeline de Evan  --------------------------------------------
 ------------------------------------------------------------------------------------------------ */

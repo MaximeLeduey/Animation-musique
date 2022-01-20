@@ -20,13 +20,13 @@ body, html {
     align-items: center;
 }
 .div-animated {
-        position: relative;
-        width: 80vw;
-        height: 70vh;
-        background: #000000;
-        border-radius: 20px;
-        overflow: hidden;
-        padding: 5px 5px 5px 5px;
+    position: relative;
+    width: 75vw;
+    height: 70vh;
+    background: #000000;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 5px 5px 5px 5px;
 }
 .text {
     color: rgb(255, 255, 255);
