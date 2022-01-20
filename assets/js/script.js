@@ -1,5 +1,6 @@
-/* -------------------------------------------------------------------------------------------
-----------------------------Début timeline de Evan-------------------------------------------- */
+let music = new Audio('/assets/song/futur-bass.mp3');
+let bpm = 60/133;
+bpm = bpm * 1000;
 
 
 // --------------------------------------------------------------------------------------
@@ -136,7 +137,7 @@ const circle = new mojs.Shape({
   scaleX:       { 1 : 1, curve: scaleCurve },
   scaleY:       { 1 : 1, curve: nScaleCurve },
   origin:       { '0 50%' : '100% 50%', easing: shiftCurve },
-  duration:     800,
+  duration:     bpm*2,
   isShowEnd: false,
   top: '50%',
 });
@@ -150,7 +151,7 @@ const circle = new mojs.Shape({
       fill:       { 'purple' : 'purple' },
       radius:     180,
       rotate:      { 360: 0 },
-      duration:   800,
+      duration:   bpm*2,
     },
     top: '50%',
   });
@@ -269,7 +270,7 @@ const rect1 = new mojs.Shape({
   radius: { 10: 70 },
   strokeWidth: 20,
   rotate: { 0: 180 },
-  duration: 1000,
+  duration: bpm*4,
   speed: 2,
   // delay: 900,
   x: { 0: 500 },
@@ -294,7 +295,7 @@ const polygon1 = new mojs.Shape({
   x: { 0: 500 },
   y: { 0: 200 },
   rotate: { [-180]: 0 },
-  duration: 1500,
+  duration: bpm*4,
   speed: 3,
   // delay: 900,
   // repeat : 2,
@@ -318,7 +319,7 @@ const star1 = new mojs.Shape({
   fill: "yellow",
   x: { 0: -500 },
   y: { 0: 160 },
-  duration: 600,
+  duration: bpm*4,
   speed: 3,
   // delay: 900,
 })
@@ -379,7 +380,7 @@ const burst1 = new mojs.Burst({
   y: { 0: -160 },
   children: {
     fill: { red: "yellow" },
-    duration: 3000,
+    duration: bpm*4,
   },
   // delay: 900,
   // repeat : 2,
@@ -393,7 +394,7 @@ const burst2 = new mojs.Burst({
   y: { 0: 160 },
   children: {
     fill: { yellow: "blue" },
-    duration: 3000,
+    duration: bpm*4,
   },
   // delay: 900,
   // repeat : 2,
@@ -407,9 +408,9 @@ const burst3 = new mojs.Burst({
   y: { 0: -160 },
   children: {
     fill: { blue: "pink" },
-    duration: 3000,
+    duration: bpm*4,
   },
-  delay: 900,
+  // delay: 900,
   // repeat : 2,
 });
 
@@ -421,7 +422,7 @@ const burst4 = new mojs.Burst({
   y: { 0: 160 },
   children: {
     fill: { pink: "black" },
-    duration: 3000,
+    duration: bpm*4,
   },
   // delay: 900,
   // repeat : 2,
@@ -435,7 +436,7 @@ const burst5 = new mojs.Burst({
   y: 160,
   children: {
     fill: "purple",
-    duration: 3000,
+    duration: bpm*4,
   },
   // delay: 1000,
   // repeat : 2,
@@ -449,9 +450,9 @@ const burst6 = new mojs.Burst({
   y: 160,
   children: {
     fill: "lime",
-    duration: 3000,
+    duration: bpm*4,
   },
-  delay: 2000,
+  // delay: 2000,
   // repeat : 2,
 });
 
@@ -463,7 +464,7 @@ const burst7 = new mojs.Burst({
   y: -160,
   children: {
     fill: "cyan",
-    duration: 3000,
+    duration: bpm*4,
   },
   // delay: 3000,
   // repeat : 2,
@@ -477,9 +478,9 @@ const burst8 = new mojs.Burst({
   y: 0,
   children: {
     fill: { red: "yellow" },
-    duration: 3000,
+    duration: bpm*4,
   },
-  delay: 4000,
+  // delay: 4000,
   // repeat : 2,
 });
 
@@ -491,7 +492,7 @@ const burst9 = new mojs.Burst({
   y: -160,
   children: {
     fill: "white",
-    duration: 5000,
+    duration: bpm*4,
   },
   // delay: 5000,
   // repeat : 2,
@@ -513,13 +514,6 @@ Evantimeline.add(
   burst9
 );
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  new MojsPlayer({
-    add: Evantimeline,
-    isPlaying: true,
-    isRepeat: true,
-  });
-});
 /* ---------------------------------------------------------------------------------------------
 ----------------------------  Fin timeline de Evan  --------------------------------------------
 ------------------------------------------------------------------------------------------------ */
