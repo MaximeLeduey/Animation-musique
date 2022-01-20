@@ -158,17 +158,7 @@ const circle = new mojs.Shape({
 fin timeline de Yanis
 ----------------------------------------- */
 
-/* ----------------------------Début timeline de Evan-------------------------------------------- * *//// const circle1 = new mojs.Shape({
-//   parent: ".div-animated",
-//   shape: "circle",
-//   scale: { 0: 1 },
-//   fill: "purple",
-//   radius: { 0: 100 },
-//   isYoyo: true,
-//   x: 0,
-//   duration: 500,
-//   speed: 1,
-// }).play();
+/* ----------------------------Début timeline de Evan-------------------------------------------- * */
 
 // const rect1 = new mojs.Shape({
 //   parent: ".div-animated",
