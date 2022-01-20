@@ -1,9 +1,11 @@
-// --------------------------------------------------------------------------------------
-// début de timeline de Maxime
-// -------------------------------------------------------------------------------------
 let music = new Audio('/assets/song/futur-bass.mp3');
 let bpm = 60/133;
 bpm = bpm * 1000;
+
+
+// --------------------------------------------------------------------------------------
+// début de timeline de Maxime
+// -------------------------------------------------------------------------------------
 const circle1 = new mojs.Shape({
     parent: '.div-animated',
     shape: 'circle',
@@ -503,6 +505,197 @@ Evantimeline.add(
 /* ---------------------------------------------------------------------------------------------
 ----------------------------  Fin timeline de Evan  --------------------------------------------
 ------------------------------------------------------------------------------------------------ */
+
+// ----------------------------------------------------------------------------
+// debut timeline de brice
+// ----------------------------------------------------------------------------
+
+
+const Rect1 = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:   {3.4:6.7},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: {"-600":"0"},
+    y: -23,
+});
+const rect1clone = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:   {3.4:6.7},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: {600:0} ,
+    y: -23,
+});
+const Rect2 = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:   {6.8:5.4},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: 0,
+    y: -23,
+});
+const Rect3 = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:   {5.4:0.4},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: -450 ,
+    y: -23,
+});
+const rect3clone = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:   {5.4:0.4},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: {'0':'450'} ,
+    y: -23,
+});
+const rect3cloneinverse = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:   {5.4:0.4},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: {'0':'-450'} ,
+    y: -23,
+});
+const Rect4 = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:  {0.4:1.4},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: 450 ,
+    y: -23,
+});
+const Rect5 = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:   {1.4:3.4},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: 0 ,
+    y: -23,
+});
+const Rect6 = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:   {3.4:5.4},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: -450 ,
+    y: -23,
+});
+const Rect7 = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:   {5.4:6.7},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: 0 ,
+    y: -23,
+});
+const Rect8 = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    scaleY:   {6.7:3.4},
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm*2,
+    x: 450 ,
+    y: -23,
+});
+const Circle3 = new mojs.Shape({
+    shape: 'rect',
+    isShowEnd: false,
+    stroke: {'transparent':'white'},
+    scaleY:    7.4,
+    scaleX: 4,
+    fill: 'white',
+    duration: bpm/2,
+    x: 670,
+    y: -23,
+});
+const Circle4 = new mojs.Shape({
+    shape: 'curve',
+    stroke: 'white',
+    scale:    { 0 : 1 },
+    strokeWidth: { 50 : 0 },
+    fill: 'white',
+    isShowEnd: false,
+    duration: bpm,
+    x: -100,
+    y: -100,
+});
+const Circle5 = new mojs.Shape({
+    shape: 'circle',
+    stroke: 'white',
+    scale:    { 0 : 1 },
+    strokeWidth: { 50 : 0 },
+    fill: 'white',
+    isShowEnd: false,
+    duration: bpm,
+    x: 400,
+    y: 100,
+});
+const Circle6 = new mojs.Shape({
+    shape: 'curve',
+    stroke: 'white',
+    scale:    { 0 : 1 },
+    strokeWidth: { 50 : 0 },
+    fill: 'white',
+    isShowEnd: false,
+    duration: bpm,
+    x: -360,
+});
+const Circle7 = new mojs.Shape({
+    shape: 'circle',
+    stroke: 'white',
+    scale:    { 0 : 1 },
+    strokeWidth: { 50 : 0 },
+    fill: 'transparent',
+    isShowEnd: false,
+    duration: bpm,
+    x: 400,
+});
+const Circle8 = new mojs.Shape({
+    shape: 'rect',
+    scaleY:   7,
+    scaleX: 16,
+    strokeWidth: { 50 : 0 },
+    fill: {'transparent':'black'},
+    isShowEnd: false,
+    duration: bpm/4,
+    x: 0 ,
+    y: -10,
+});
+const restart = new mojs.Shape({
+    shape: 'rect',
+    fill: 'white',
+    scale: {0:1},
+    duration: bpm,
+})
+// ----------------------------------------------------------------------------
+// fin timeline de brice
+// ---------------------------------------------------------------------------
+
+
 document.addEventListener('DOMContentLoaded', (event) => {
 // timeline de maxime
 const maximeTimeline = new mojs.Timeline({repeat:6});
@@ -523,9 +716,18 @@ Evantimeline.add(
   burst8,
   burst9
 );
+//timeline de brice
+const rectTimeline = new mojs.Timeline({});
+const rectTimelineClone = new mojs.Timeline({});
+const clignTimeline = new mojs.Timeline({repeat: 64});
+const briceTimeline = new mojs.Timeline({});
+rectTimeline.append(Rect1, Rect2, Rect3,Rect4, Rect5, Rect6, Rect7, Rect8 );
+clignTimeline.add(Circle8);
+rectTimeline.add(rect1clone,rect3cloneinverse,rect3clone)
+briceTimeline.add(rectTimeline, clignTimeline, rectTimelineClone);
 // timeline principale
 const mainTimeline = new mojs.Timeline({});
-mainTimeline.append(maximeTimeline, Yanistimeline, Evantimeline);
+mainTimeline.append(maximeTimeline, Yanistimeline, Evantimeline, briceTimeline);
 let play = document.querySelector('.div-animated');
 play.addEventListener('click', function(){
     mainTimeline.play();
