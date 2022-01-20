@@ -129,6 +129,7 @@ const scaleCurveBase = mojs.easing.path( 'M0,100 C21.3776817,95.8051376 50,77.32
 const scaleCurve = (p) => { return 1 + scaleCurveBase(p); };
 const nScaleCurve = (p) => { return 1 - scaleCurveBase(p)/10; };
 const circle = new mojs.Shape({
+  parent: '.div-animated',
   shape:        'rect',
   fill:         { 'purple' : 'purple', curve: scaleCurve },
   radius:       20,
@@ -142,6 +143,7 @@ const circle = new mojs.Shape({
   top: '50%',
 });
   const burst = new mojs.Burst({
+    parent: '.div-animated',
     radius:   { 0: 100 },
     count:    20,
     radius: 100,
@@ -373,6 +375,7 @@ const star1 = new mojs.Shape({
 // }).play();
 
 const burst1 = new mojs.Burst({
+  parent: '.div-animated',
   radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
@@ -387,6 +390,7 @@ const burst1 = new mojs.Burst({
 });
 
 const burst2 = new mojs.Burst({
+  parent: '.div-animated',
   radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
@@ -401,6 +405,7 @@ const burst2 = new mojs.Burst({
 });
 
 const burst3 = new mojs.Burst({
+  parent: '.div-animated',
   radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
@@ -415,6 +420,7 @@ const burst3 = new mojs.Burst({
 });
 
 const burst4 = new mojs.Burst({
+  parent: '.div-animated',
   radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
@@ -429,6 +435,7 @@ const burst4 = new mojs.Burst({
 });
 
 const burst5 = new mojs.Burst({
+  parent: '.div-animated',
   radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
@@ -443,6 +450,7 @@ const burst5 = new mojs.Burst({
 });
 
 const burst6 = new mojs.Burst({
+  parent: '.div-animated',
   radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
@@ -457,6 +465,7 @@ const burst6 = new mojs.Burst({
 });
 
 const burst7 = new mojs.Burst({
+  parent: '.div-animated',
   radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
@@ -471,6 +480,7 @@ const burst7 = new mojs.Burst({
 });
 
 const burst8 = new mojs.Burst({
+  parent: '.div-animated',
   radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
@@ -485,6 +495,7 @@ const burst8 = new mojs.Burst({
 });
 
 const burst9 = new mojs.Burst({
+  parent: '.div-animated',
   radius: { 50: 140 },
   count: 20,
   opacity: { 1: 0 },
@@ -524,6 +535,7 @@ Evantimeline.add(
 
 
 const Rect1 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:   {3.4:6.7},
@@ -534,6 +546,7 @@ const Rect1 = new mojs.Shape({
     y: -23,
 });
 const rect1clone = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:   {3.4:6.7},
@@ -544,6 +557,7 @@ const rect1clone = new mojs.Shape({
     y: -23,
 });
 const Rect2 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:   {6.8:5.4},
@@ -554,6 +568,7 @@ const Rect2 = new mojs.Shape({
     y: -23,
 });
 const Rect3 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:   {5.4:0.4},
@@ -564,6 +579,7 @@ const Rect3 = new mojs.Shape({
     y: -23,
 });
 const rect3clone = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:   {5.4:0.4},
@@ -574,6 +590,7 @@ const rect3clone = new mojs.Shape({
     y: -23,
 });
 const rect3cloneinverse = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:   {5.4:0.4},
@@ -584,6 +601,7 @@ const rect3cloneinverse = new mojs.Shape({
     y: -23,
 });
 const Rect4 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:  {0.4:1.4},
@@ -594,6 +612,7 @@ const Rect4 = new mojs.Shape({
     y: -23,
 });
 const Rect5 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:   {1.4:3.4},
@@ -604,6 +623,7 @@ const Rect5 = new mojs.Shape({
     y: -23,
 });
 const Rect6 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:   {3.4:5.4},
@@ -614,6 +634,7 @@ const Rect6 = new mojs.Shape({
     y: -23,
 });
 const Rect7 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:   {5.4:6.7},
@@ -624,6 +645,7 @@ const Rect7 = new mojs.Shape({
     y: -23,
 });
 const Rect8 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     scaleY:   {6.7:3.4},
@@ -634,6 +656,7 @@ const Rect8 = new mojs.Shape({
     y: -23,
 });
 const Circle3 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     isShowEnd: false,
     stroke: {'transparent':'white'},
@@ -645,6 +668,7 @@ const Circle3 = new mojs.Shape({
     y: -23,
 });
 const Circle4 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'curve',
     stroke: 'white',
     scale:    { 0 : 1 },
@@ -656,6 +680,7 @@ const Circle4 = new mojs.Shape({
     y: -100,
 });
 const Circle5 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'circle',
     stroke: 'white',
     scale:    { 0 : 1 },
@@ -667,6 +692,7 @@ const Circle5 = new mojs.Shape({
     y: 100,
 });
 const Circle6 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'curve',
     stroke: 'white',
     scale:    { 0 : 1 },
@@ -677,6 +703,7 @@ const Circle6 = new mojs.Shape({
     x: -360,
 });
 const Circle7 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'circle',
     stroke: 'white',
     scale:    { 0 : 1 },
@@ -687,6 +714,7 @@ const Circle7 = new mojs.Shape({
     x: 400,
 });
 const Circle8 = new mojs.Shape({
+  parent: '.div-animated',
     shape: 'rect',
     scaleY:   7,
     scaleX: 16,
