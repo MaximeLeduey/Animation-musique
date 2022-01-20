@@ -139,7 +139,7 @@ const circle = new mojs.Shape({
   origin:       { '0 50%' : '100% 50%', easing: shiftCurve },
   duration:     800,
   isShowEnd: false,
-  top: 350,
+  top: '50%',
 });
   const burst = new mojs.Burst({
     radius:   { 0: 100 },
@@ -153,7 +153,7 @@ const circle = new mojs.Shape({
       rotate:      { 360: 0 },
       duration:   800,
     },
-    top: 350,
+    top: '50%',
   });
 /* -----------------------------------------
 fin timeline de Yanis
@@ -276,7 +276,7 @@ const rect1 = new mojs.Shape({
   rotate: { 0: 180 },
   duration: 1000,
   speed: 2,
-  delay: 900,
+  // delay: 900,
   x: { 0: 500 },
   y: { 0: -200 },
   isYoyo: true,
@@ -301,7 +301,7 @@ const polygon1 = new mojs.Shape({
   rotate: { [-180]: 0 },
   duration: 1500,
   speed: 3,
-  delay: 900,
+  // delay: 900,
   // repeat : 2,
 }).then({
   stroke: { blue: "purple" },
@@ -325,7 +325,7 @@ const star1 = new mojs.Shape({
   y: { 0: 160 },
   duration: 600,
   speed: 3,
-  delay: 900,
+  // delay: 900,
 })
   .then({
     fill: "red",
@@ -477,7 +477,7 @@ const burst1 = new mojs.Burst({
   y: -180,
   children: {
     fill: "white",
-    duration: 3000,
+    duration: 5000,
   },
   delay: 5000,
   // repeat : 2,
@@ -685,12 +685,12 @@ const Circle8 = new mojs.Shape({
     x: 0 ,
     y: -10,
 });
-const restart = new mojs.Shape({
-    shape: 'rect',
-    fill: 'white',
-    scale: {0:1},
-    duration: bpm,
-})
+// const restart = new mojs.Shape({
+//     shape: 'rect',
+//     fill: 'white',
+//     scale: {0:1},
+//     duration: bpm,
+// })
 // ----------------------------------------------------------------------------
 // fin timeline de brice
 // ---------------------------------------------------------------------------
@@ -701,7 +701,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 const maximeTimeline = new mojs.Timeline({repeat:6});
 maximeTimeline.append(circle1, circle2, circle3, circle4, circle5, circle6, circle7, circle8,);
 // timeline de Yanis
-const Yanistimeline = new mojs.Timeline({delay:2200});
+const Yanistimeline = new mojs.Timeline({});
 Yanistimeline.append(circle,burst)
 // timeline de evan
 const Evantimeline = new mojs.Timeline();
@@ -727,11 +727,24 @@ rectTimeline.add(rect1clone,rect3cloneinverse,rect3clone)
 briceTimeline.add(rectTimeline, clignTimeline, rectTimelineClone);
 // timeline principale
 const mainTimeline = new mojs.Timeline({});
-mainTimeline.append(maximeTimeline, Yanistimeline, Evantimeline, briceTimeline);
-let play = document.querySelector('.div-animated');
-play.addEventListener('click', function(){
-    mainTimeline.play();
-    music.play();
+mainTimeline.append(maximeTimeline, Yanistimeline.append(Evantimeline, briceTimeline));
+let playPause = document.querySelector('.div-animated');
+let statut = "pause";
+playPause.addEventListener('click', function(){
+    if ( statut == "pause") {
+      mainTimeline.play();
+      music.play();
+      statut = "play";
+      console.log(statut);
+    }
+    else {
+      mainTimeline.pause();
+      music.pause();
+      statut = "pause";
+      console.log(statut);
+    }
+    
+    
 })
 // on ajoute la timeline principale au player
 // const mojsPlayer = new MojsPlayer({
